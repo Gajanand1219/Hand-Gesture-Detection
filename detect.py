@@ -48,7 +48,7 @@ def main():
             for hand_landmarks in results.multi_hand_landmarks:
                 mp_drawing.draw_landmarks(image, hand_landmarks, mp_hands.HAND_CONNECTIONS)
                 gesture = detect_gesture(hand_landmarks)
-                cv2.putText(image, gesture, (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv2.LINE_AA)
+                cv2.putText(image, gesture, (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (1, 255, 0), 2, cv2.LINE_AA)
 
         # Display the video feed
         cv2.imshow("Hand Gesture Detection", image)
